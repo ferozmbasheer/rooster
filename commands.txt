@@ -1,0 +1,10 @@
+cargo xbuild 
+
+cargo bootimage
+
+qemu-system-x86_64 -drive format=raw,file=target/x86_64-rooster_os/debug/bootimage-rooster.bin
+
+--
+rm -rf ~/.cargo/registry
+
+
